@@ -1,1 +1,38 @@
-hello world!
+<h1>Key to ASCII notation</h1>
+<ul>
+<li>'<tt>{}</tt>' = ∅ = "empty set"</li>
+<li>'<tt>(-</tt>' = ∈ = "element of"</li>
+<li>'<tt>(_</tt>' = ⊆ = "subset of" (not strict)</li>
+<li>'<tt>u</tt>' = ∪ = "union"</li>
+<li>'<tt>n</tt>' = ∩ = "intersection"</li>
+<li>'<tt>~L</tt>' = <em class="comp"><var>L</var></em>
+      = "complement of <var>L</var>"</li>
+<li>'<tt>-]</tt>' = ∃ = "there exists"</li>
+<li>'<tt>\-/</tt>' = ∀ = "for all"</li>
+<li>'<tt>/\</tt>' = ∧ = "and"</li>
+<li>'<tt>\/</tt>' = ∨ = "or"</li>
+<li>'<tt>-&gt;</tt>' = → = "implies"</li>
+<li>'<tt>&lt;-&gt;</tt>' = ↔ = "if and only if (iff)"</li>
+<li>'<tt>!</tt>' = ¬ = "not", <em>e.g.</em>,
+    '<tt>a != b</tt>' = <var>a</var> ≠ <var>b</var>
+      = "<var>a</var> is not equal to <var>b</var>",
+    '<tt>w !(- L</tt>' = <var>w</var> ∉ <var>L</var>
+      = "<var>w</var> is not an element of <var>L</var>",
+    <em>etc</em>.</li>
+<li>'<tt>\sum</tt>' = ∑ = summation sign</li>
+<li>'<tt>\prod</tt>' = ∏ = product sign</li>
+<li>'<tt>\Sigma</tt>' = Σ = capital greek letter Sigma,
+    '<tt>\delta</tt>' = δ = lowercase greek letter delta,
+    <em>etc</em>.</li>
+<li>'<tt>|_x_|</tt>' = ⌊<var>x</var>⌋ = floor(x)</li>
+<li>'<tt>|^x^|</tt>' = ⌈<var>x</var>⌉ = ceiling(x)</li>
+<li>'<tt>_</tt>' indicates a subscript, <em>e.g.</em>,
+    '<tt>q_1</tt>' = <var>q</var><sub>1</sub></li>
+<li>'<tt>^</tt>' indicates a superscript, <em>e.g.</em>,
+    '<tt>n^2</tt>' = <var>n</var><sup>2</sup></li>
+<li>curly braces '<tt>{}</tt>' surround longer subscripts/superscripts,
+    <em>e.g.</em>,
+    '<tt>\sum_{0 &lt;= i &lt;= n} 2^{i/2}</tt>' =
+∑<sub>0 ≤ <var>i</var> ≤ <var>n</var></sub>
+    2<sup><var>i</var>/2</sup></li>
+</ul>
