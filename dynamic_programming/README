@@ -1,0 +1,16 @@
+DYNAMIC PROGRAMMING (DP):
+
+In this context, "Programming" refers to a tabular method.
+
+The idea is to solve problems by combining solutions to subproblems. 
+Unlike divide and conquer methods, however, DP algorithm solves each subproblem only once - avoiding the work of recomputation of answer each time a sub problem is solved.
+
+
+
+Steps:
+0. Identify optimal substructures
+1. Define an array
+2. Write a recurrence relation that defines elements of array in terms of other elements of the array
+3. Write algorithm to fill this array
+4. Show how the array can be used to solve the particular problem
+4. Analyze run time	

@@ -1,0 +1,9 @@
+The rod cutting problem is the following:
+
+Given a rod of length n inches and a 
+table of prices P_i for i (- 1,2,..,n
+Determine the maximum revenue R_n obtainable 
+by cutting up the rod and selling the pieces. 
+Note that if the price P_n for a rod 
+of length n is large enough, an optimal solution may require no cutting at all
+.
