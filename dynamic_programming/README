@@ -3,7 +3,7 @@ DYNAMIC PROGRAMMING (DP):
 In this context, "Programming" refers to a tabular method.
 
 The idea is to solve problems by combining solutions to subproblems. 
-Unlike divide and conquer methods, however, DP algorithm solves each subproblem only once - avoiding the work of recomputation of answer each time a sub problem is solved.
+Unlike divide and conquer methods, however, DP algorithms solve each subproblem only once - avoiding the work of recomputation of an answer each time a sub problem is solved.
 
 
 
