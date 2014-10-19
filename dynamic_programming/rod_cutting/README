@@ -1,9 +1,33 @@
 The rod cutting problem is the following:
 
-Given a rod of length n inches and a 
-table of prices P_i for i (- 1,2,..,n
-Determine the maximum revenue R_n obtainable 
-by cutting up the rod and selling the pieces. 
-Note that if the price P_n for a rod 
-of length n is large enough, an optimal solution may require no cutting at all
-.
+Given a rod of length n inches and a table of prices P_i for i (- 1,2,..,n
+Determine the maximum revenue R_n obtainable by cutting up the rod and selling the pieces. 
+Note that if the price P_n for a rod of length n is large enough, an optimal solution may require no cutting at all.
+
+Solution:
+
+DP1: Let R be an array that holds the optimal revenue obtainable by cutting rod with length n
+DP2: R[0] = 0
+	 R[1] = P[1]
+	 R[i] = max_{1<=j<=i}(P[i] + R[i-j])
+DP4: R[0..n] is an array
+	 R[0] = 0
+	 for i in 1..n:
+	 	maxRevSoFar = negative infinity
+	 	for j in 1..j:
+	 		maxRevSoFar = max(maxRevSoFar, P[j] + R[i-j])
+	 	R[i] = maxRevSoFar
+	 return R[n]
+DP5: The actual problem required finding list of size of pieces that give optimal revenue.
+	 Since we always first cut rod into two pieces, lets store the size of first piece by modifying the algorithm as follows:
+	 R[0..n] and S[0..n] is an array
+	 R[0] = 0
+	 for i in 1..n:
+	 	maxRevSoFar = negative infinity
+	 	for j in 1..j:
+	 		if (P[i] + R[i-j]) > maxRevSoFar:
+	 			maxRevSoFar = max(maxRevSoFar, P[j] + R[i-j])
+	 			S[i] = j
+	 	R[i] = maxRevSoFar
+	 return [S[n], R[n]]
+DP6: O(n^2)	 
