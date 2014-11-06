@@ -1,0 +1,14 @@
+The Discount Pricing problem is the following:
+
+A store has a buy one, get one for 1/2 price discount. You have to separetely visit the cash register with each pair of items for the discount to apply.
+
+You want to buy items with prices p_1,...,p_n and want to determine which pairs of items to bring to the cash register for the maximum discount. For convenience, p_{n+1} = ... = P{2n} = 0 are non-items which essentially allows you to bring single items to the cash register (for no 1/2 off discount).
+
+Input: a sequence of item prices p_1,...,p_n,p_{n+1},...,p_{2n} where p_1,...,p_n > 0 and p_{n+1} = ... = p_{2n} = 0
+
+Problem: Return all the p_i as a list of pairs (a_1,b_1),...,(a_n,b_n) with a_i >= b_i so that \Sigma_{i=1}^{n}(a_i+(b_i)/2) is minimal
+
+Give a greedy algorithm and write a detailed proof that this algorithm always returns a sequence of items leading to a lowest purchase price. 
+
+Solution:
+See Images 1.jpg and 2.jpg
