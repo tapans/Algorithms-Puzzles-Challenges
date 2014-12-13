@@ -1,0 +1,12 @@
+The Simple Knapsack problem is the following:
+
+You have a knapsack with capacity k and want to choose a collection of items to take in the knapsack such that the weight of the items does not exceed capacity k, and the total weight of all the weights is maximal
+
+Input: weights w_1, ... , w_n (- N and knapsack capacity k (- N
+
+Problem: Find S (_ {1,...,n} such that 
+    weight(S) <= k and weight(S) is maximal
+
+Solve using Dynamic Programming.
+
+DP1: Let A[i,j] = 1 if 	

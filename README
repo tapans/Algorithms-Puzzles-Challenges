@@ -20,4 +20,5 @@ Key to ASCII notation
     '|^x^|' = ⌈x⌉ = ceiling(x)
     '_' indicates a subscript, e.g., 'q_1' = q1
     '^' indicates a superscript, e.g., 'n^2' = n2
-    curly braces '{}' surround longer subscripts/superscripts, e.g., '\sum_{0 <= i <= n} 2^{i/2}' = ∑0 ≤ i ≤ n 2i/2
+        curly braces '{}' surround longer subscripts/superscripts, e.g., '\sum_{0 <= i <= n} 2^{i/2}' = ∑0 ≤ i ≤ n 2i/2
+    '|N' = ℕ = natural numbers 

@@ -1,0 +1,32 @@
+The Zero-One Knapsack problem is the following:
+
+You have a knapsack with capacity k and want to choose a collection of items to take in the knapsack such that the weight of the items does not exceed capacity k, and the value of the chosen items in maximum.
+
+Input: Capacity k (- |N and a sequence of items (w_1,v_1),...,(w_n,v_n) where w_i (- |N is the weight of item i and v_i (- |N is the value of item i
+
+Problem: Find S (_ {1,...,n} such that \Sigma_{i (- S}w_i <= k and \Sigma_{i (- S}v_i is maximum
+
+Solve using Dynamic Programming.
+
+DP1: Let A[i,j] = m if total weight j can be made using w_1,...,w_i wherem is the sum of the  		values of the weights. i.e m = \Sigma_{k=1}^{k=i}v_k 
+DP2: A[i,j] = -1 for j<0 //can't make negative weights
+	 A[i,0] = 0 //to make a weight of 0, choose 0 weights => 0 value
+	 A[0,j] = -1 //can't make any weight if there are no weights
+	 A[i,j] = A[i-1,j-w_i]+v_i if A[i-1,j] >= 0 or A[i-1,j-w_i] >= 0
+	 A[i,j] = -1 otherwise
+DP4: ZOK_Array(W,k,V):		
+		A[0,j] = -1 for j in [0..k]
+		A[i,0] = 0 for i in [0..len(W)]
+		for i in 1..len(W):
+			for j in 1..k:
+				if(A[i-1,j] >= 0):
+					A[i,j] = A[i-1,j]
+				if(A[i-1,j-w_i] >= 0):
+					A[i,j] = A[i-1,j-w_j] + V[i]:		
+				else:
+					A[i,j] = -1
+		return A[i,k] //returns the maximum value that can be made
+DP5: ZOK_Solution(W,k,V):
+		A[0,j] = -1 for j in [0..k]
+		A[i,0] = 0 for i in [0..len(W)]
+		M[i,j] = False for 							

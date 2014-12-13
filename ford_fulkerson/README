@@ -1,0 +1,30 @@
+#Adopted from Arnold Rosenbloom's notes
+
+Ford-Fulkerson algorithm:
+    start with any valid flow f (e.g., f(e) = 0 for all e (- E)
+    while there is an "augmenting path" P
+        "augment" f using P
+    output f
+
+  - Intuition: "Since all flow must "start" at s and "end" at t, find s-t paths
+    along which flow can be increased. Instead of adding flow to edges in
+    haphazard manner, this preserves conservation."
+
+  - Idea: allow "backward" edges on path and Define residual
+    capacity of e:
+        \Delta_f(e) = c(e) - f(e) if e is a forward edge on the path;
+        \Delta_f(e) = f(e) if e is a backward edge on the path.
+    Intuition: forward edge has "unused capacity" that can be used to push
+    more flow from s to t; backward edge has "surplus flow" that can be
+    redirected to push more flow from s to t.
+    Note: this is a form of backtracking -- changing our mind about previously
+    assigned flow.
+    (Example: s -8/16-> a <-4/4- b -9/14-> d -5/7-> c -17/20-> t in earlier
+    network -- edge (b,a) traversed in backward direction with residual
+    capacity = f(b,a) = 4.)
+
+  - Augmenting path = s-t path where each edge has positive residual capacity
+    (i.e., c(e)-f(e) > 0 for forward edges e, f(e) > 0 for backward edges e).
+
+  - Augmentation: add \Delta_f(P) (defined as before) to forward edges,
+    subtract it from backward edges.    

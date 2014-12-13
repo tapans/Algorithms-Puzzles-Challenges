@@ -1,0 +1,11 @@
+A flow network G D .V;E/ for the Lucky Puck Company’s trucking problem.
+The Vancouver factory is the source van, and the Winnipeg warehouse is the sink win . The company ships
+pucks through intermediate cities, but only C(u,v) crates per day can go from city u to city v. 
+
+V = (van,edm,cal,sas,reg,win)
+E = {(van,edm),(van,cal),(cal,edm),(edm,sas),(sas,cal),(cal,reg),(reg,sas),(sas,win),(reg,win)}
+C = {(van,edm):16, (van,cal):8, (cal,edm):1, (edm,sas):12, (sas,cal):4, (cal,reg): 14, (reg,sas):7, (sas,win): 20,(reg,win):4}
+
+let a,b,..,h,i represent the flow passed through edges in E in order i.e "a" presents flow for edge (van,edm), "i" represents flow for edge (reg,win)
+
+To find maximum flow, we can use linear programming (see max_flow.lp), or ford_fulkerson algorithm (see images ford_fulkerson_1.jpg and fod_fulkerson_2.jpg)
