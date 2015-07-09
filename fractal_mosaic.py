@@ -112,42 +112,29 @@ def _match(image, threshold, pic_database):
 def _avg_color(image):
     ''' Return the average color object of the Image image '''
     
-    h = image.histogram()
+    h = image.histogram()        
+    red_count = h[0:256]
+    green_count = h[256:512]
+    blue_count = h[512:768]
+    sum_of_red_values = sum_of_green_values = sum_of_blue_values = 0
+    total_pixels = image.size[0] * image.size[1]
     
-    red = h[0:256]
-    sum_of_red_values = 0
-    total_red_pixels = 0
-    for value in range(len(red)):
-        sum_of_red_values += (value * red[value])
-        total_red_pixels += red[value]
-    if total_red_pixels:
-        average_red = sum_of_red_values / total_red_pixels
+    for i in range(256):
+        if red_count:
+            sum_of_red_values += red_count[i] * i
+        if green_count:
+            sum_of_green_values += green_count[i] * i
+        if blue_count:
+            sum_of_blue_values += blue_count[i] * i
+    if total_pixels: # <-- if total_pixels is not 0: 
+        #can't divide by 0 on Earth - apparently the limit approaches infinity.
+        average_red = sum_of_red_values / total_pixels
+        average_green = sum_of_green_values / total_pixels
+        average_blue = sum_of_blue_values / total_pixels
     else:
-        average_red = 0
+        average_red = average_green = average_blue = 0
     
-    green = h[256:512]
-    sum_of_green_values = 0
-    total_green_pixels = 0
-    for value in range(len(green)):
-        sum_of_green_values += (value * green[value])
-        total_green_pixels += green[value]
-    if total_green_pixels:
-        average_green = sum_of_green_values / total_green_pixels
-    else:
-        average_green = 0
-    
-    blue = h[512:768]
-    sum_of_blue_values = 0
-    total_blue_pixels = 0
-    for value in range(len(blue)):
-        sum_of_blue_values += (value * blue[value])
-        total_blue_pixels += blue[value]
-    if total_blue_pixels:
-        average_blue = sum_of_blue_values / total_blue_pixels
-    else:
-        average_blue = 0
-    
-    return media.Color(average_red, average_green, average_blue)
+    return (average_red, average_green, average_blue)
 
 def help_distance(col1, col2):
     ''' Return the Eucleadean distance between the two colors '''
