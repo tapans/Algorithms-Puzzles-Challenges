@@ -31,7 +31,7 @@ namespace BlockPuzzle
             while (q.Count > 0)
             {
                 PuzzleStateNode node = q.Dequeue();
-                if (solveHelper(node, node.getCurrentConfiguration()))
+                if (solveHelper(node))
                 {
                     Console.WriteLine("solution found!");
                     return solution;
@@ -46,9 +46,10 @@ namespace BlockPuzzle
             return null;
         }
         
-        private bool solveHelper(PuzzleStateNode node, BlockPuzzleConfigList stateConfig)
+        private bool solveHelper(PuzzleStateNode node)
         {
-            PuzzleStateNode childPuzzleStateNode;
+            PuzzleStateNode childPuzzleStateNode;            
+            BlockPuzzleConfigList stateConfig = node.getCurrentConfiguration();
             BlockPuzzleConfigList tempConfig;
             puzzleInstance.setupConfiguration(stateConfig);
             var moves = puzzleInstance.getAvailableMoves();

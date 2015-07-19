@@ -7,7 +7,7 @@ namespace BlockPuzzle
     {        
         static void Main(string[] args)
         {            
-            PuzzleInstance puzzle = new PuzzleInstance(Globals.initialConfiguration); //could also supply any arbitrary initial configuration
+            PuzzleInstance puzzle = new PuzzleInstance(Globals.initialConfiguration, Globals.targetConfiguration); //could also supply any arbitrary initial configuration
             PuzzleSolver solver = new PuzzleSolver(puzzle);
             var listOfMovesToSolve = solver.solve(); 
             if (listOfMovesToSolve != null)

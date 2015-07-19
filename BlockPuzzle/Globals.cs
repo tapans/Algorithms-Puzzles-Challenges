@@ -10,16 +10,15 @@ namespace BlockPuzzle
 
         public static BlockPuzzleConfigList initialConfiguration = new BlockPuzzleConfigList()
         {
-            0,
-            1,
-            2,
-            4,
             3,
-            5,
-            6,
             7,
+            1,
+            6,
+            4,
+            2,
             8,
-            9
+            5,
+            0
         };
 
         public static BlockPuzzleConfigList targetConfiguration = new BlockPuzzleConfigList()
@@ -40,7 +39,7 @@ namespace BlockPuzzle
         {
             //Extremely Raw test of crucial PuzzleInstance & PuzzleBlock methods
             Console.WriteLine("----------------BEGIN RAW TEST-----------------");
-            var p = new PuzzleInstance(Globals.initialConfiguration);
+            var p = new PuzzleInstance(Globals.initialConfiguration, Globals.targetConfiguration);
             Console.Write(p);
             var m = p.getAvailableMoves().First();
             Console.WriteLine("making the move to: {0}", m);
@@ -50,7 +49,7 @@ namespace BlockPuzzle
             p.setupConfiguration(Globals.targetConfiguration);
             Console.Write(p);
             Console.WriteLine("is puzzle solved: {0}", p.puzzleCompleted());
-            p = new PuzzleInstance(Globals.initialConfiguration);
+            p = new PuzzleInstance(Globals.initialConfiguration, Globals.targetConfiguration);
             p.move("right");
             p.move("right");
             p.move("down");
@@ -64,7 +63,7 @@ namespace BlockPuzzle
             Console.WriteLine("-----------------END RAW TEST------------------");
 
             Console.WriteLine("----------------BEGIN RAW PUZZLE_STATE_NODE TEST-----------------");
-            p = new PuzzleInstance(Globals.initialConfiguration);
+            p = new PuzzleInstance(Globals.initialConfiguration, Globals.targetConfiguration);
             var root = new PuzzleStateNode("", p.getCurrentConfiguration());
             PuzzleStateNode child;
             var tempConfig = p.getCurrentConfiguration();

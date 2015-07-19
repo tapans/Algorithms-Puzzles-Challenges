@@ -10,15 +10,16 @@ namespace BlockPuzzle
     class PuzzleInstance
     {
         private PuzzleBlock[,] puzzleBoard;
+        private BlockPuzzleConfigList targetConfiguration;
         private Tuple<int, int> emptyBlockPosition; //keep track of where the emptyblock is
 
-        public PuzzleInstance(BlockPuzzleConfigList initialConfiguration)
+        public PuzzleInstance(BlockPuzzleConfigList initConfig, BlockPuzzleConfigList targetConfig)
         {
-            initiatePuzzleBoard();
-            setupConfiguration(initialConfiguration);
+            initiatePuzzleBoard(targetConfig);
+            setupConfiguration(initConfig);
         }
 
-        private void initiatePuzzleBoard()
+        private void initiatePuzzleBoard(BlockPuzzleConfigList target)
         {
             puzzleBoard = new PuzzleBlock[Globals.gridDimension, Globals.gridDimension];
             for (int r = 0; r < Globals.gridDimension; r++)
@@ -28,25 +29,21 @@ namespace BlockPuzzle
                     puzzleBoard[c, r] = new PuzzleBlock(0, c, r);
                 }
             }
+            targetConfiguration = target;
         }
 
-        public void setupConfiguration(BlockPuzzleConfigList configuration)
+        public void setupConfiguration(BlockPuzzleConfigList initialConfiguration)
         {
             int i = 0;
             for (int r = 0; r < Globals.gridDimension; r++)
             {
                 for (int c = 0; c < Globals.gridDimension; c++)
                 {
-                    puzzleBoard[c, r].Number = configuration[i];
+                    puzzleBoard[c, r].Number = initialConfiguration[i];
                     i++;
                 }
             }
-            emptyBlockPosition = findEmptyBlockPos();
-        }
-
-        public void setTargetConfiguration(BlockPuzzleConfigList targetCfg)
-        {
-
+            emptyBlockPosition = findEmptyBlockPos();            
         }
 
         public List<string> getAvailableMoves()
