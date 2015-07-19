@@ -1,7 +1,7 @@
 # Block-Puzzle
-C# implementation of solving the Block Puzzle:
+C# implementation of solving the following puzzle:
 
-Objective: List the steps to restore the puzzle from the right to the left below (or any arbitrary initial and target configuration).
+<b>Objective</b>: List the steps to restore the puzzle from the right to the left below (or any arbitrary initial and target configuration).
 <br>Each step can only move a block up, down, left or right if it is allowed. 
 <br>For example, the first move could only be either 5 to the right or 2 to the below.
 
