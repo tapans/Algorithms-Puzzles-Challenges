@@ -142,7 +142,7 @@ namespace BlockPuzzle
             {
                 for (int c = 0; c < Globals.gridDimension; c++)
                 {
-                    if (puzzleBoard[c, r].Number != Globals.targetConfiguration[i])
+                    if (puzzleBoard[c, r].Number != targetConfiguration[i])
                     {
                         return false;
                     }
