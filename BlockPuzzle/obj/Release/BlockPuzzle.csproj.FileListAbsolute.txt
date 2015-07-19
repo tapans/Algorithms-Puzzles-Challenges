@@ -8,3 +8,4 @@ C:\BlockPuzzle\BlockPuzzle\obj\Release\BlockPuzzle.exe
 C:\BlockPuzzle\BlockPuzzle\obj\Release\BlockPuzzle.pdb
 C:\BlockPuzzle\BlockPuzzle\bin\Release\BlockPuzzle.exe
 C:\BlockPuzzle\BlockPuzzle\bin\Release\BlockPuzzle.pdb
+C:\BlockPuzzle\BlockPuzzle\obj\Release\BlockPuzzle.csprojResolveAssemblyReference.cache

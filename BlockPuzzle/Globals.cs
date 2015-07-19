@@ -14,7 +14,7 @@ namespace BlockPuzzle
             7,
             1,
             6,
-            4,
+            2,
             2,
             8,
             5,
