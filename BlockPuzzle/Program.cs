@@ -12,7 +12,11 @@ namespace BlockPuzzle
             var listOfMovesToSolve = solver.solve(); 
             if (listOfMovesToSolve != null)
             {
+                Console.WriteLine("Solution found!");
                 printSolution(listOfMovesToSolve);
+            }
+            else{
+                Console.WriteLine("No Solution found!");
             }
         }
 
