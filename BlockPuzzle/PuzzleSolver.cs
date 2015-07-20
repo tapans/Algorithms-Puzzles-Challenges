@@ -33,7 +33,6 @@ namespace BlockPuzzle
                 PuzzleStateNode node = q.Dequeue();
                 if (solveHelper(node))
                 {
-                    Console.WriteLine("solution found!");
                     return solution;
                 }
                 numChildren = node.Nodes.Count;
@@ -42,7 +41,6 @@ namespace BlockPuzzle
                     q.Enqueue((PuzzleStateNode) node.Nodes[i]);
                 }
             }
-            Console.WriteLine("NO solution found!");
             return null;
         }
         
