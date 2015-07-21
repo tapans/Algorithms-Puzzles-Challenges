@@ -23,7 +23,8 @@ namespace BlockPuzzle
         static void printSolution(List<Tuple<int, string>> listOfMoves)
         {
             int i = 0;
-            for (i = 0; i < listOfMoves.Count; i++)
+            int numMoves = listOfMoves.Count;
+            for (i = 0; i < numMoves; i++)
             {
                 Console.WriteLine("Step {0}: Move {1} {2}", i+1, listOfMoves[i].Item1, listOfMoves[i].Item2);                
             }
