@@ -8,7 +8,7 @@ C# implementation of solving the following puzzle:
 ![alt tag](example.png)
 
 See if you can solve the puzzle yourself:
-<br><a target="_blank">http://csprojects.me/blockPuzzle/</a>
+<br><a target="_blank" href="http://csprojects.me/blockPuzzle/">csprojects.me/blockPuzzle/</a>
 
 Implementation notes:
 - Solves the given puzzle almost instantaneously, ~30ms
