@@ -1,11 +1,14 @@
 # Block-Puzzle
 C# implementation of solving the following puzzle:
 
-<b>Objective</b>: List the steps to restore the puzzle from the right to the left below 
+<b>Objective</b>: List the steps to restore the puzzle from the right to the left below
 <br>Each step can only move a block up, down, left or right if it is allowed. 
 <br>For example, the first move could only be either 5 to the right or 2 to the below.
 
 ![alt tag](example.png)
+
+See if you can solve the puzzle yourself:
+<br>http://csprojects.me/blockPuzzle/
 
 Implementation notes:
 - Solves the given puzzle almost instantaneously, ~30ms
