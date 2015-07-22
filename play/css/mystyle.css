@@ -1,0 +1,48 @@
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.block{			
+    width:100px;
+    height:100px;
+    color:white;
+    background-color:blue;
+    font-weight:bold;
+    line-height: 100px;
+    text-align: center;
+    cursor:default;
+}		
+.emptyBlock{
+	display: none;
+}
+.winBlock{
+	background-color: rebeccapurple;
+}
+#gameBoard, #displayMessage{
+	float:left;		
+	margin-right:20px;	
+}
+#displayMessage{
+	height:300px;
+	width:200px;
+	overflow:scroll;
+	overflow-y:auto;
+	overflow-x:auto;
+}
+#restartBtn{
+	clear: both;
+	display: block;
+	border-radius: 5px;
+	color: yellow;
+	background-color: red;
+	padding: 5px;
+	font-weight: bold;
+	font-size: 20px;
+}
+#wonMssg{
+	color:blue;
+}
