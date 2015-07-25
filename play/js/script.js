@@ -55,8 +55,8 @@ var BlockPuzzleGame;
 					this.hideEmptyPosBlock();
 
 					steps = 0;
-					document.getElementById('displayMessage').innerHTML = "";		
-
+					document.getElementById('displayMessage').innerHTML = "";
+					document.getElementById('restartBtn').style.backgroundColor = "green";
 					removeClass(document.getElementsByClassName("block"), "winBlock");
 
 					this.bindEvents();
@@ -125,6 +125,7 @@ var BlockPuzzleGame;
 								this.blocks[i].removeEventListener("mousedown", this.listeners[i]);
 								this.blocks[i].removeEventListener("mousedown", this.listeners[i]);
 							}
+							document.getElementById('restartBtn').style.backgroundColor = "red";
 						} 
 						var statusElem = document.getElementById("displayMessage");
 						statusElem.innerHTML += statusUpdate;
