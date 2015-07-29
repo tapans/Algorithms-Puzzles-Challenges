@@ -1,5 +1,5 @@
 # Block-Puzzle
-C# implementation of solving the following puzzle:
+<a href='BlockPuzzle'>C#</a> implementation of solving the puzzle described below along with a simple playable version of the game implemented in <a href='play'>JavaScript</a>
 
 <b>Objective</b>: List the steps to restore the puzzle from the right to the left below
 <br>Each step can only move a block up, down, left or right if it is allowed. 
