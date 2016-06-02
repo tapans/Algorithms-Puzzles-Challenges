@@ -10,6 +10,7 @@ Example: Input "abc" outputs: ["abc", "acb", "bac", "bca", "cab", "cba"]
 3. concat removed char with returned perms of substring
 
 ### Complexity
+```
 T(n) = n*T(n-1)
      = n*[n-1*T(n-2)]
      = n*[n-1*[n-2*T(n-3)]]
@@ -18,3 +19,4 @@ T(n) = n*T(n-1)
      .
      = n*n-1*n-2*...*1
 => O(n!)
+```
