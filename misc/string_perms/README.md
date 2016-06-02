@@ -1,6 +1,7 @@
 # String Permutations
 
 Problem Statement: Given a string s. Return a list of all permutations of s
+
 Example: Input "abc" outputs: ["abc", "acb", "bac", "bca", "cab", "cba"]
 
 ### Approach
