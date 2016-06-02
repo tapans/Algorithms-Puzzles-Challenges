@@ -23,7 +23,7 @@ Write a method that takes the existing word and the new word (after the edit is 
 - for replacement, assume the diff of the new string always has unique characters (no overwriting letter(s) with same letter(s)). 
 		So can't change "hello" to "hAllE"
 
-Examples: 
+###Examples: 
 ```
 get_diff("hell", "heEl")  would return  {
 											type : "replacement",
