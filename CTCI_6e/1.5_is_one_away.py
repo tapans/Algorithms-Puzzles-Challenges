@@ -29,7 +29,7 @@ def is_one_away(s1, s2):
 					return False
 		return True
 
-class Test_Is_Unique(unittest.TestCase):
+class Test_Is_One_Away(unittest.TestCase):
 
 	def test_one_away_case(self):
 		self.assertTrue(is_one_away("mom", "mam"))

@@ -28,7 +28,7 @@ def is_palindrome_permutation(s):
 	return True
 
 
-class Test_Is_Unique(unittest.TestCase):
+class Test_Is_Palindrom_Permutation(unittest.TestCase):
 
 	def test_palindrome_permutation_case(self):
 		self.assertTrue(is_palindrome_permutation("Tact Coa"))

@@ -29,7 +29,7 @@ def is_perm(s1, s2):
 		return True
 
 
-class TestIsUnique(unittest.TestCase):
+class Test_Is_Perm(unittest.TestCase):
 
 	def test_perm_case(self):
 		self.assertTrue(is_perm("incest", "insect"))

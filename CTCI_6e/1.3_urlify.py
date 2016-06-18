@@ -18,7 +18,7 @@ def urlify(s):
 	return ''.join(s_arr)
 
 
-class Test_Is_Unique(unittest.TestCase):
+class Test_Urlify(unittest.TestCase):
 
 	def test_urlify(self):
 		self.assertEquals(urlify("a b d"), 'a%20b%20d')
