@@ -49,13 +49,13 @@ class Directed_Acylic_Graph:
 				if source == dest:
 					return True, prev
 				for node in self.nodes[source]:
-					prev[node] = source
-					if node == dest:
-						return True, prev
-					if not node.visited:						
-						Q.append(node)
-					else:
-						node.visited = True
+					if not node.visited:
+						prev[node] = source
+						if node == dest:
+							return True, prev
+						else:	
+							Q.append(node)
+				node.visited = True
 			return None, prev
 
 
