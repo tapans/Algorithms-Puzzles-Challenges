@@ -4,8 +4,8 @@ import unittest
 def rotated_array_search(A, k):
 	'''
 		Finds index of element k in a sorted array A that has been rotated an unknown # of times
-		Time Complexity: O()
-		Space Complexity: O()
+		Time Complexity: O(log n)
+		Space Complexity: O(1)
 	'''
 
 	def rotated_array_search_helper(A,k,index_tracker):
