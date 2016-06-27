@@ -1,41 +1,23 @@
 #!/usr/bin/python
 import unittest
 import logging
-
-class Linked_List_Node:
-	def __init__(self, data, next):
-		self.data = data
-		self.next = next
-
-	def __str__(self):
-		return str(self.data)
-
-	def get_length(self):
-		length = 1		
-		while self.next != None:
-			self = self.next
-			length += 1
-		return length
-
-	def print_ll(self):
-		print self
-		while self.next != None:
-			self = self.next
-			print self
+from linked_list_node import Linked_List_Node
 
 def remove_dups_in_ll(ll):
 	'''
-		Remove duplicates in an unsorted linked list 
+		Remove duplicates in an unsorted linked list
+		Time Complexity: O(n)
+		Space Complexity: O(n)
 	'''
 
-	seen = []
-	seen.append(ll.data)
+	seen = {}
+	seen[ll.data] = 1
 	root = ll
 	while ll.next != None:		
 		if (ll.next.data in seen):
 			ll.next = ll.next.next			
 		else:
-			seen.append(ll.next.data)
+			seen[ll.next.data] = 1
 		ll = ll.next
 	return root
 
