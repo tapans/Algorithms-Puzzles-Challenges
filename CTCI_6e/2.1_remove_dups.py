@@ -25,7 +25,9 @@ class Linked_List_Node:
 
 def remove_dups_in_ll(ll):
 	'''
-		Remove duplicates in an unsorted linked list 
+		Remove duplicates in an unsorted linked list
+		Time Complexity: O(n)
+		Space Complexity: O(n)
 	'''
 
 	seen = []
