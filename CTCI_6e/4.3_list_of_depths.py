@@ -1,40 +1,8 @@
 #!/usr/bin/python
 import unittest
 import logging
-
-class Binary_Node:
-	def __init__(self, num, left, right):		
-		self.num = num
-		self.left = left
-		self.right = right
-
-	def print_bt(self):
-		if self == None: return
-		self.left.print_bt()
-		print self.num
-		self.right.print_bt()
-
-class Singly_Linked_List_Node:
-	def __init__(self, data, next):
-		self.data = data
-		self.next = next
-
-	def __str__(self):
-		return str(self.data)
-
-	def get_length(self):
-		length = 1		
-		while self.next != None:
-			self = self.next
-			length += 1
-		return length
-
-	def print_ll(self):
-		print self
-		while self.next != None:
-			self = self.next
-			print self
-		print '----'
+from linked_list_node import Linked_List_Node
+from binary_node import Binary_Node
 
 def list_of_depths(binary_tree):
 	'''
@@ -46,13 +14,13 @@ def list_of_depths(binary_tree):
 	def pre_ord_traverse_bt(bt, depth=0):
 		if bt is not None:			
 			if depth not in depths:
-				depths[depth] = Singly_Linked_List_Node(bt.num, None)
+				depths[depth] = Linked_List_Node(bt.num, None)
 			else:
 				ll = depths[depth]
 				while ll is not None:
 					prev = ll
 					ll = ll.next
-				prev.next = Singly_Linked_List_Node(bt.num, None)
+				prev.next = Linked_List_Node(bt.num, None)
 
 			pre_ord_traverse_bt(bt.left, depth + 1)
 			pre_ord_traverse_bt(bt.right, depth + 1)

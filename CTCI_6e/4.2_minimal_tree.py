@@ -1,12 +1,7 @@
 #!/usr/bin/python
 import unittest
 import logging
-
-class BinaryNode:
-	def __init__(self, num, left, right):		
-		self.num = num
-		self.left = left
-		self.right = right
+from binary_node import Binary_Node
 
 def minimal_tree(sorted_arr):
 	'''
@@ -17,19 +12,19 @@ def minimal_tree(sorted_arr):
 	if len(sorted_arr) == 0:
 		return None
 	elif len(sorted_arr) == 1:
-		return BinaryNode(sorted_arr[0], None, None)
+		return Binary_Node(sorted_arr[0], None, None)
 	else:
 		mid = len(sorted_arr) / 2
-		return BinaryNode(sorted_arr[mid], minimal_tree(sorted_arr[:mid]), minimal_tree(sorted_arr[mid+1:]))
+		return Binary_Node(sorted_arr[mid], minimal_tree(sorted_arr[:mid]), minimal_tree(sorted_arr[mid+1:]))
 
 class Test_Minimal_Tree(unittest.TestCase):
 
 	def test_minimal_tree(self):
-		left_leaf = BinaryNode(6, None, None)
-		second_left_leaf = BinaryNode(1, None, None)
-		two_node = BinaryNode(2, second_left_leaf, None)
-		seven_node = BinaryNode(7, left_leaf, None)
-		correct_binary_tree = BinaryNode(4, two_node, seven_node)
+		left_leaf = Binary_Node(6, None, None)
+		second_left_leaf = Binary_Node(1, None, None)
+		two_node = Binary_Node(2, second_left_leaf, None)
+		seven_node = Binary_Node(7, left_leaf, None)
+		correct_binary_tree = Binary_Node(4, two_node, seven_node)
 		self.print_binary_tree(correct_binary_tree)
 		print '--------'
 		sorted_arr = [1,2,4,6,7]		
